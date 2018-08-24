@@ -23,12 +23,12 @@
 			if ($newPrecio >= $from && $newPrecio <= $to && $dataArray[$i]->Ciudad == $ciudad && $dataArray[$i]->Tipo == $tipo) {
 				array_push($newData, $dataArray[$i]);
 				// Evaluamos si solo se indico precio y ciudad.
-			} else if ($newPrecio >= $from && $newPrecio <= $to && $dataArray[$i]->Ciudad == $ciudad && $dataArray[$i]->Tipo == "") {
+			}else if($newPrecio >= $from && $newPrecio <= $to && $dataArray[$i]->Ciudad == $ciudad && $tipo == "") {
 				array_push($newData, $dataArray[$i]);
 				// Evaluamos si solo se indico el precio y tipo.
-			} else if ($newPrecio >= $from && $newPrecio <= $to && $dataArray[$i]->Ciudad == "" && $dataArray[$i]->Tipo == $tipo) {
-				array_push($newData, $dataArray[$I]);
-			} else if ($newPrecio >= $from && $newPrecio <= $to && $dataArray[$i]->Ciudad == "" && $dataArray[$i]->Tipo == "") {
+			}else if($newPrecio >= $from && $newPrecio <= $to && $ciudad == "" && $dataArray[$i]->Tipo == $tipo) {
+				array_push($newData, $dataArray[$i]);
+			}else if($newPrecio >= $from && $newPrecio <= $to && $ciudad == "" && $tipo == "") {
 				array_push($newData, $dataArray[$i]);
 			}
 		}
